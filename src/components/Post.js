@@ -17,7 +17,7 @@ const Post = (props) => {
         })
     }
     return (
-        <div>
+        <div key={props.post.id} >
             <h2>{props.post.title}</h2>
             <p> {props.post.content} </p>
             <button

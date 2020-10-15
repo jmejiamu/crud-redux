@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { connect } from 'react-redux';
-import { addArticle } from '../actions/actions';
+import { addArticle } from '../actions/addArticle';
 
 const PostForm = (props) => {
     console.log(props)
@@ -12,10 +12,8 @@ const PostForm = (props) => {
         e.preventDefault();
 
         const data = {
-            // id: Date(),
             title: title,
             content: content,
-            // edit: false
         }
 
         // props.dispatch({

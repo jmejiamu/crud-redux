@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Post from './Post'
 import EditComponent from './EditComponent';
 
-import { requestPost } from '../actions/actions';
+import { requestPost } from '../actions/actions'; // getting all post
 const AllPost = (props) => {
     // console.log('>>>', props.posts);
     useEffect(() => {
@@ -13,7 +13,7 @@ const AllPost = (props) => {
 
     return (
         <div>
-            <h1>All Posts</h1>
+            <h1 className="text-red-800">All Posts</h1>
             {props.posts.map((post) => {
                 return (
                     <div key={post.id}>
@@ -30,7 +30,7 @@ const AllPost = (props) => {
 const mapStateToProps = (state) => {
     console.log('Here>>>', state);
     return {
-        posts: state
+        posts: state.post
 
     }
 }
