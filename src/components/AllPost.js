@@ -12,8 +12,8 @@ const AllPost = (props) => {
     }, []);
 
     return (
-        <div>
-            <h1 className="text-red-800">All Posts</h1>
+        <div className="px-10" >
+            <h1 className="text-green-500">All Posts</h1>
             {props.posts.map((post) => {
                 return (
                     <div key={post.id}>

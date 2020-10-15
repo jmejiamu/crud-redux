@@ -27,10 +27,11 @@ const PostForm = (props) => {
     }
 
     return (
-        <div>
+        <div className="px-10 py-5">
             <h1>Create Post</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <input
+                    className=" border border-gray-800 "
                     required
                     type="text"
                     placeholder="Enter Post Title"
@@ -38,12 +39,13 @@ const PostForm = (props) => {
                     onChange={e => setTitle(e.target.value)} /><br /><br />
 
                 <textarea required
+                    className="border border-gray-800"
                     rows="5" cols="28"
                     placeholder="Enter Post"
                     value={content}
                     onChange={e => setContent(e.target.value)}
                 /><br /><br />
-                <button>Post</button>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >Post</button>
             </form>
         </div>
     );
