@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { connect } from 'react-redux';
 import { deletePost } from './../actions/deleteAction';
-import { updatePost } from './../actions/updatePost';
 import { editOpen } from './../actions/editOpen';
 
 
@@ -33,7 +32,7 @@ const Post = (props) => {
         // props.updatePost(id, body)
     }
     return (
-        <div key={props.post.id} >
+        <div key={props.post.id} className="">
             <h2 className="text-2xl text-gray-700" >{props.post.title}</h2>
             <p className="text-gray-500" > {props.post.content} </p>
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
