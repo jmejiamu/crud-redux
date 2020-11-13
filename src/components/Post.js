@@ -18,18 +18,9 @@ const Post = (props) => {
     }
 
     const editPost = (id) => {
-        // props.dispatch({
-        //     type: 'EDIT_POST',
-        //     id: props.post.id
-        // });
-        props.editOpen(id);
-        // const body = {
-        //     title: title,
-        //     content: content
-        // }
 
-        // const id = props.post.id;
-        // props.updatePost(id, body)
+        props.editOpen(id);
+
     }
     return (
         <div key={props.post.id} className="">
